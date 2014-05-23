@@ -1,9 +1,8 @@
 <?php include('default_header.php'); ?>
-    <div>
-        <?php
-            echo "<br><br><br><br><br><br>";
-            echo "<pre>";
-            var_dump($_SESSION['username']);
-        ?>
+	<hr>
+    <div class="container theme-showcase">
+    	<div class="jumbotron">
+	     	<?php echo $someval;?>
+	    </div>
     </div>
 <?php include('footer.php'); ?>

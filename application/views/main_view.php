@@ -13,25 +13,29 @@
                 </div>
                 <div class="panel-body">
                     <div class="list-group">
-                          <a href="" class="list-group-item">Create the Questionaries
+                          <a href="" class="list-group-item">
                             <span class="container theme-showcase">
                                 <img src='<?php echo BASE_URL; ?>static/assets/ico/ic_create.jpg' width="60" height="40">
                             </span>
+                            Create the Questionaries
                           </a>
-                          <a href="" class="list-group-item">Share and data colleting
+                          <a href="" class="list-group-item">
                             <span class="container theme-showcase">
                                 <img src="<?php echo BASE_URL; ?>static/assets/ico/icon_collectors_large.jpg" alt="" width="60" height="40">
                             </span>
+                            Share and Data Colleting
                             </a>
-                          <a href="" class="list-group-item">analysing and reporting
+                          <a href="" class="list-group-item">
                             <span class="container theme-showcase">
                                 <img src="<?php echo BASE_URL; ?>static/assets/ico/icon_analyze_large.jpg" alt="" width="60" height="40">
                             </span>
+                            Analysing and Rreporting
                           </a>
-                          <a href="" class="list-group-item">Sharing with social network
+                          <a href="" class="list-group-item">
                             <span class="container theme-showcase">
                                 <img src="<?php echo BASE_URL; ?>static/assets/ico/ic_share.jpg" alt="" width="60" height="40">
                             </span>
+                            Sharing with Social Network
                           </a>
                     </div>
                 </div>
@@ -64,15 +68,18 @@
                                     Female
                                   </label>
                                 </div>
+                                <hr>
                                 <button type="submit" class="btn btn-primary btn-large">Submit</button>
                                 <button type="reset" class="btn btn-primary btn-large">Cancel</button>
                             </div>
                         </fieldset>
                     </form>
+                    <hr>
+                        <p>D-Survey.com</p>
+                    <hr>
                 </div>
             </div>
         </div>
-     
         <div class="row"><!-- /.col-sm-4 --><!-- /.col-sm-4 --><!-- /.col-sm-4 -->
         </div>
     </div>

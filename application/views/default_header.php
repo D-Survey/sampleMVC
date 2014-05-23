@@ -14,6 +14,14 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo BASE_URL; ?>static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .navbar-inverse{
+          background-color: #2b669a;
+      }
+      .well{
+          background-color: #2b669a;
+      }
+    </style>
 
   </head>
 
@@ -35,15 +43,15 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#"><i class="glyphicon glyphicon-user"></i><?php echo " ".$_SESSION['username'];?></a></li>
-            <li class="active"><a href="#"><i class="glyphicon glyphicon-comment"></i><span class="badge">10</span></a></li>
-            <li class="active"><a href="#"><i class="glyphicon glyphicon-globe"></i><span class="badge">5</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i><?php echo " ".$_SESSION['username'];?></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-comment"></i><span class="badge btn-danger active">10</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-globe"></i><span class="badge btn-danger active">5</span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">|<b class="caret"></b></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu navbar-inverse">
                 <li><a href="#"><i class="glyphicon glyphicon-road"></i> My Survey</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>
-                <li><a href="../main/logout"><i class="glyphicon glyphicon-off"></i> Log Out</a></li>
+                <li><a href="/main/logout"><i class="glyphicon glyphicon-off"></i> Log Out</a></li>
               </ul>
             </li>
           </ul>
