@@ -25,16 +25,19 @@ function pip()
 
 	// Get our controller file
     $path = APP_DIR . 'controllers/' . $controller . '.php';
+
 	if(file_exists($path)){
         require_once($path);
 	} else {
-        $controller = $config['error_controller'];
+        //$controller = $config['error_controller'];
+        $controller = 'main';
         require_once(APP_DIR . 'controllers/' . $controller . '.php');
 	}
     
     // Check the action exists
     if(!method_exists($controller, $action)){
         $controller = $config['error_controller'];
+        //$controller = $config['default_controller'];
         require_once(APP_DIR . 'controllers/' . $controller . '.php');
         $action = 'index';
     }

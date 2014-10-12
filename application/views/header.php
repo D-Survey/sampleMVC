@@ -14,13 +14,14 @@
 
       <!-- Bootstrap core CSS -->
       <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/static/assets/css/survey.css" rel="stylesheet">
 
       <style>
         .navbar-inverse{
-          background-color: #2b669a;
+          background-color: #007196;
         }
-        .well{
-            background-color: #2b669a;
+        .nav-info{
+            background-color: #007196;
         }
       </style>
 
@@ -47,7 +48,7 @@
           <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form" action="/main/login" method="post">
               <div class="form-group input-group-sm">
-                <input type="text" placeholder="Username" name="username" class="form-control" required>
+                <input type="text" placeholder="Email" name="username" class="form-control" required>
               </div>
               <div class="form-group input-group-sm">
                 <input type="password" placeholder="Password" name="password" class="form-control" required>
@@ -57,4 +58,5 @@
           </div><!--/.navbar-collapse -->
 
         </div>
-      </div> 
+      </div>
+

@@ -7,9 +7,14 @@ class Model {
 	public function __construct()
 	{
 		global $config;
-		
-		$this->connection = mysql_pconnect($config['db_host'], $config['db_username'], $config['db_password']) or die('MySQL Error: '. mysql_error());
-		mysql_select_db($config['db_name'], $this->connection);
+
+		try {
+		    $this->connection = new PDO('mysql:host='.$config['db_host'].';dbname='.$config['db_name'].'',
+		    							$config['db_username'], $config['db_password']);
+		    $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		} catch (PDOException $e) {
+		    echo 'Connection failed: ' . $e->getMessage();
+		}
 	}
 
 	public function escapeString($string)
@@ -41,22 +46,32 @@ class Model {
 	public function to_datetime($val)
 	{
 	    return date('Y-m-d H:i:s', $val);
+
 	}
 	
 	public function query($qry)
 	{
-		$result = mysql_query($qry) or die('MySQL Error: '. mysql_error());
-		$resultObjects = array();
-
-		while($row = mysql_fetch_object($result)) $resultObjects[] = $row;
-
-		return $resultObjects;
+		try {
+			$statment = $this->connection->query($qry);
+			$result = $statment->fetchAll(PDO::FETCH_OBJ);
+			return $result;
+		} catch (PDOException $e) {
+		    echo 'statement failed: ' . $e->getMessage();
+		}
 	}
 
 	public function execute($qry)
 	{
-		$exec = mysql_query($qry) or die('MySQL Error: '. mysql_error());
-		return $exec;
+		try {
+			$exec = $this->connection->query($qry);
+			return $exec;
+		} catch (PDOException $e) {
+		    echo 'execution failed: ' . $e->getMessage();
+		}
+	}
+
+	public function lastInsertId(){
+		 return $this->connection->lastInsertId();
 	}
     
 }

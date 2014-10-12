@@ -1,6 +1,6 @@
 <?php
 
-class Error extends Controller {
+class mobile extends Controller {
 	
 	function index()
 	{
